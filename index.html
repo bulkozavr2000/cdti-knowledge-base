@@ -8,165 +8,40 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #f5f7fa;
-      color: #1a1a2e;
-      line-height: 1.6;
-      padding: 0 16px;
+      background: #f5f7fa; color: #1a1a2e; line-height: 1.6; padding: 0 16px;
     }
     .container { max-width: 800px; margin: 0 auto; padding: 24px 0; }
-
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 24px;
-    }
+    .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
     .header h1 { font-size: 1.5rem; color: #1a1a2e; }
     .header .subtitle { color: #6b7280; font-size: 0.9rem; margin-top: 2px; }
-
-    .add-btn {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      background: #2563eb;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      padding: 10px 18px;
-      font-size: 0.9rem;
-      cursor: pointer;
-      text-decoration: none;
-      font-weight: 500;
-      white-space: nowrap;
-    }
+    .add-btn { display: flex; align-items: center; gap: 6px; background: #2563eb; color: #fff; border: none; border-radius: 8px; padding: 10px 18px; font-size: 0.9rem; cursor: pointer; text-decoration: none; font-weight: 500; white-space: nowrap; }
     .add-btn:hover { background: #1d4ed8; }
     .add-btn svg { width: 18px; height: 18px; }
-
-    .search-box {
-      position: relative;
-      margin-bottom: 20px;
-    }
-    .search-box input {
-      width: 100%;
-      padding: 12px 16px 12px 42px;
-      border: 1px solid #d1d5db;
-      border-radius: 10px;
-      font-size: 0.95rem;
-      background: #fff;
-      outline: none;
-      transition: border-color 0.2s;
-    }
+    .search-box { position: relative; margin-bottom: 20px; }
+    .search-box input { width: 100%; padding: 12px 16px 12px 42px; border: 1px solid #d1d5db; border-radius: 10px; font-size: 0.95rem; background: #fff; outline: none; transition: border-color 0.2s; }
     .search-box input:focus { border-color: #2563eb; }
-    .search-box svg {
-      position: absolute;
-      left: 14px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 18px;
-      height: 18px;
-      color: #9ca3af;
-    }
-
-    .article {
-      background: #fff;
-      border-radius: 12px;
-      margin-bottom: 12px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-      overflow: hidden;
-    }
-    .article-title {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 20px;
-      cursor: pointer;
-      user-select: none;
-      font-weight: 600;
-      font-size: 1.05rem;
-      color: #1a1a2e;
-      transition: background 0.15s;
-    }
+    .search-box svg { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: #9ca3af; }
+    .article { background: #fff; border-radius: 12px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; }
+    .article-title { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; cursor: pointer; user-select: none; font-weight: 600; font-size: 1.05rem; color: #1a1a2e; transition: background 0.15s; }
     .article-title:hover { background: #f9fafb; }
-    .article-title .chevron {
-      width: 20px;
-      height: 20px;
-      transition: transform 0.2s;
-      color: #9ca3af;
-      flex-shrink: 0;
-    }
+    .article-title .chevron { width: 20px; height: 20px; transition: transform 0.2s; color: #9ca3af; flex-shrink: 0; }
     .article.open .article-title .chevron { transform: rotate(90deg); }
-    .article-body {
-      display: none;
-      padding: 0 20px 16px;
-    }
+    .article-body { display: none; padding: 0 20px 16px; }
     .article.open .article-body { display: block; }
-
     .section { margin-bottom: 12px; }
-    .section-heading {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      cursor: pointer;
-      user-select: none;
-      font-weight: 500;
-      font-size: 0.95rem;
-      color: #374151;
-      padding: 8px 0;
-    }
+    .section-heading { display: flex; align-items: center; gap: 8px; cursor: pointer; user-select: none; font-weight: 500; font-size: 0.95rem; color: #374151; padding: 8px 0; }
     .section-heading:hover { color: #2563eb; }
-    .section-heading .chevron-sm {
-      width: 16px;
-      height: 16px;
-      transition: transform 0.2s;
-      color: #9ca3af;
-      flex-shrink: 0;
-    }
+    .section-heading .chevron-sm { width: 16px; height: 16px; transition: transform 0.2s; color: #9ca3af; flex-shrink: 0; }
     .section.open .section-heading .chevron-sm { transform: rotate(90deg); }
-    .section-content {
-      display: none;
-      padding-left: 24px;
-    }
+    .section-content { display: none; padding-left: 24px; }
     .section.open .section-content { display: block; }
-    .section-content ul, .section-content ol {
-      margin: 4px 0 8px 16px;
-    }
-    .section-content li {
-      margin-bottom: 6px;
-      color: #4b5563;
-    }
-    .section-content p {
-      margin: 4px 0;
-      color: #4b5563;
-    }
-
-    .highlight {
-      background: #fef3c7;
-      border-left: 4px solid #f59e0b;
-      padding: 10px 14px;
-      border-radius: 0 8px 8px 0;
-      margin: 8px 0;
-      font-size: 0.9rem;
-      color: #92400e;
-    }
-
-    .no-results {
-      text-align: center;
-      color: #9ca3af;
-      padding: 40px 0;
-      font-size: 0.95rem;
-    }
-
-    .updated {
-      color: #9ca3af;
-      font-size: 0.75rem;
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    @media (max-width: 600px) {
-      .header { flex-direction: column; align-items: flex-start; gap: 12px; }
-      .add-btn { align-self: stretch; justify-content: center; }
-    }
+    .section-content ul, .section-content ol { margin: 4px 0 8px 16px; }
+    .section-content li { margin-bottom: 6px; color: #4b5563; }
+    .section-content p { margin: 4px 0; color: #4b5563; }
+    .highlight { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 10px 14px; border-radius: 0 8px 8px 0; margin: 8px 0; font-size: 0.9rem; color: #92400e; }
+    .no-results { text-align: center; color: #9ca3af; padding: 40px 0; font-size: 0.95rem; }
+    .updated { color: #9ca3af; font-size: 0.75rem; text-align: center; margin-top: 20px; }
+    @media (max-width: 600px) { .header { flex-direction: column; align-items: flex-start; gap: 12px; } .add-btn { align-self: stretch; justify-content: center; } }
   </style>
 </head>
 <body>
@@ -192,28 +67,29 @@
   </div>
 
   <script>
-    const REPO_OWNER = 'bulkozavr2000';
-    const REPO_NAME = 'cdti-knowledge-base';
-    const DATA_FILE = 'articles.json';
+    var REPO_OWNER = 'bulkozavr2000';
+    var REPO_NAME = 'cdti-knowledge-base';
+    var DATA_FILE = 'articles.json';
 
-    const editUrl = \`https://github.com/\${REPO_OWNER}/\${REPO_NAME}/edit/main/\${DATA_FILE}\`;
+    var editUrl = 'https://github.com/' + REPO_OWNER + '/' + REPO_NAME + '/edit/main/' + DATA_FILE;
     document.getElementById('addBtn').href = editUrl;
 
-    const chevronSvg = (cls) => \`<svg class="\${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>\`;
+    function chevronSvg(cls) {
+      return '<svg class="' + cls + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>';
+    }
 
     function render(articles) {
-      const container = document.getElementById('articles');
-      const query = document.getElementById('search').value.toLowerCase().trim();
-
-      let filtered = articles;
+      var container = document.getElementById('articles');
+      var query = document.getElementById('search').value.toLowerCase().trim();
+      var filtered = articles;
       if (query) {
-        filtered = articles.filter(a => {
-          const titleMatch = a.title.toLowerCase().includes(query);
-          const contentMatch = a.sections.some(s =>
-            (s.heading && s.heading.toLowerCase().includes(query)) ||
-            (s.text && s.text.toLowerCase().includes(query)) ||
-            (s.items && s.items.some(i => i.toLowerCase().includes(query)))
-          );
+        filtered = articles.filter(function(a) {
+          var titleMatch = a.title.toLowerCase().includes(query);
+          var contentMatch = a.sections.some(function(s) {
+            return (s.heading && s.heading.toLowerCase().includes(query)) ||
+              (s.text && s.text.toLowerCase().includes(query)) ||
+              (s.items && s.items.some(function(i) { return i.toLowerCase().includes(query); }));
+          });
           return titleMatch || contentMatch;
         });
       }
@@ -223,184 +99,47 @@
         return;
       }
 
-      container.innerHTML = filtered.map((article, ai) => {
-        const sectionsHtml = article.sections.map((section, si) => {
-          let contentHtml = '';
+      container.innerHTML = filtered.map(function(article, ai) {
+        var sectionsHtml = article.sections.map(function(section, si) {
+          var contentHtml = '';
           if (section.items) {
-            contentHtml = '<ol>' + section.items.map(item => \`<li>\${item}</li>\`).join('') + '</ol>';
+            contentHtml = '<ol>' + section.items.map(function(item) { return '<li>' + item + '</li>'; }).join('') + '</ol>';
           } else if (section.text) {
-            contentHtml = \`<div class="highlight">\${section.text}</div>\`;
+            contentHtml = '<div class="highlight">' + section.text + '</div>';
           }
-
-          return \`
-            <div class="section" data-section="\${ai}-\${si}">
-              <div class="section-heading" onclick="toggleSection(this)">
-                \${chevronSvg('chevron-sm')}
-                \${section.heading}
-              </div>
-              <div class="section-content">\${contentHtml}</div>
-            </div>\`;
+          return '<div class="section" data-section="' + ai + '-' + si + '">' +
+            '<div class="section-heading" onclick="toggleSection(this)">' +
+            chevronSvg('chevron-sm') + ' ' + section.heading + '</div>' +
+            '<div class="section-content">' + contentHtml + '</div></div>';
         }).join('');
 
-        return \`
-          <div class="article\${query ? ' open' : ''}" data-article="\${ai}">
-            <div class="article-title" onclick="toggleArticle(this)">
-              <span>\${article.title}</span>
-              \${chevronSvg('chevron')}
-            </div>
-            <div class="article-body">\${sectionsHtml}</div>
-          </div>\`;
+        return '<div class="article' + (query ? ' open' : '') + '" data-article="' + ai + '">' +
+          '<div class="article-title" onclick="toggleArticle(this)">' +
+          '<span>' + article.title + '</span>' + chevronSvg('chevron') + '</div>' +
+          '<div class="article-body">' + sectionsHtml + '</div></div>';
       }).join('');
 
-      if (query) {
-        container.querySelectorAll('.section').forEach(s => s.classList.add('open'));
-      }
+      if (query) { container.querySelectorAll('.section').forEach(function(s) { s.classList.add('open'); }); }
     }
 
-    function toggleArticle(el) {
-      el.closest('.article').classList.toggle('open');
-    }
+    function toggleArticle(el) { el.closest('.article').classList.toggle('open'); }
+    function toggleSection(el) { el.closest('.section').classList.toggle('open'); }
 
-    function toggleSection(el) {
-      el.closest('.section').classList.toggle('open');
-    }
-
-    let articlesData = [];
-
+    var articlesData = [];
     fetch(DATA_FILE)
-      .then(r => r.json())
-      .then(data => {
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
         articlesData = data;
         render(data);
         document.getElementById('updated').textContent =
           'Последнее обновление: ' + new Date().toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' });
       })
-      .catch(err => {
-        document.getElementById('articles').innerHTML =
-          '<div class="no-results">Ошибка загрузки данных</div>';
+      .catch(function(err) {
+        document.getElementById('articles').innerHTML = '<div class="no-results">Ошибка загрузки данных</div>';
         console.error(err);
       });
 
-    document.getElementById('search').addEventListener('input', () => render(articlesData));
+    document.getElementById('search').addEventListener('input', function() { render(articlesData); });
   </script>
 </body>
-</html><!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CDTI — База знаний техподдержки</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #f5f7fa;
-      color: #1a1a2e;
-      line-height: 1.6;
-      padding: 0 16px;
-    }
-    .container { max-width: 800px; margin: 0 auto; padding: 32px 0; }
-    h1 {
-      font-size: 1.75rem;
-      margin-bottom: 8px;
-      color: #1a1a2e;
-    }
-    .subtitle {
-      color: #6b7280;
-      margin-bottom: 32px;
-      font-size: 0.95rem;
-    }
-    .article {
-      background: #fff;
-      border-radius: 12px;
-      padding: 24px;
-      margin-bottom: 16px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-    }
-    .article h2 {
-      font-size: 1.25rem;
-      margin-bottom: 16px;
-      color: #2563eb;
-      cursor: pointer;
-    }
-    .article h3 {
-      font-size: 1rem;
-      margin: 16px 0 8px;
-      color: #374151;
-    }
-    .article ul, .article ol {
-      margin-left: 20px;
-      margin-bottom: 12px;
-    }
-    .article li { margin-bottom: 6px; }
-    .article p { margin-bottom: 10px; }
-    .highlight {
-      background: #fef3c7;
-      border-left: 4px solid #f59e0b;
-      padding: 12px 16px;
-      border-radius: 0 8px 8px 0;
-      margin: 12px 0;
-    }
-    .contact-box {
-      background: #eff6ff;
-      border-left: 4px solid #2563eb;
-      padding: 12px 16px;
-      border-radius: 0 8px 8px 0;
-      margin: 12px 0;
-    }
-    strong { color: #111827; }
-    .updated { color: #9ca3af; font-size: 0.8rem; margin-top: 24px; text-align: center; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>CDTI — База знаний</h1>
-    <p class="subtitle">Ответы на частые вопросы техподдержки</p>
-
-    <div class="article">
-      <h2>Не работает терминал — что делать</h2>
-
-      <h3>Симптомы</h3>
-      <ul>
-        <li>Терминал не включается</li>
-        <li>Терминал зависает или не реагирует на нажатия</li>
-        <li>Ошибка связи / нет подключения к сети</li>
-        <li>Не проходит оплата (отказ транзакции)</li>
-      </ul>
-
-      <h3>Что сделать в первую очередь</h3>
-      <ol>
-        <li><strong>Перезагрузите терминал</strong> — выключите его, подождите 10 секунд, включите снова</li>
-        <li><strong>Проверьте кабели</strong> — убедитесь, что кабель питания и сетевой кабель (Ethernet) надёжно подключены</li>
-        <li><strong>Проверьте интернет</strong> — откройте любой сайт на компьютере в той же сети. Если интернет не работает — проблема в сети, обратитесь к провайдеру</li>
-        <li><strong>Проверьте SIM-карту</strong> (если терминал работает через мобильную сеть) — убедитесь, что SIM вставлена правильно и на счету есть средства</li>
-      </ol>
-
-      <h3>Если терминал включается, но не проходит оплата</h3>
-      <ol>
-        <li>Проверьте, не истёк ли срок действия карты клиента</li>
-        <li>Попросите клиента попробовать другую карту</li>
-        <li>Выполните <strong>сверку итогов</strong> (End of Day / Settlement) — иногда это устраняет проблему</li>
-        <li>Проверьте дату и время на терминале — если сбились, оплата может не проходить</li>
-      </ol>
-
-      <div class="highlight">
-        <strong>Важно:</strong> Если терминал выдаёт код ошибки — запишите его перед обращением в поддержку.
-      </div>
-
-      <h3>Если ничего не помогло</h3>
-      <div class="contact-box">
-        <p>Обратитесь в техподдержку:</p>
-        <ul>
-          <li>Опишите проблему максимально подробно</li>
-          <li>Укажите модель терминала и серийный номер</li>
-          <li>Сообщите, какие шаги уже были выполнены</li>
-        </ul>
-        <p><strong>Время реакции:</strong> в рабочее время — до 30 минут.</p>
-      </div>
-    </div>
-
-    <p class="updated">Последнее обновление: 6 апреля 2026</p>
-  </div>
-</body>
-  </html>
+</html>
